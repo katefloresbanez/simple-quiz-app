@@ -1,34 +1,19 @@
 import { useState } from 'react'
-import { Grommet } from 'grommet'
-
-const theme = {
-  global: {
-    font: {
-      family: "Roboto",
-      size: "18px",
-      height: "20px",
-    },
-  },
-};
+import { Box, Button, Card, Heading, Paragraph } from 'grommet'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [startQuiz, setStartQuiz] = useState(false)
 
   return (
-      <Grommet theme={theme} full>
-          <h1>Vite + React</h1>
-          <div className="card">
-            <button onClick={() => setCount((count) => count + 1)}>
-              count is {count}
-            </button>
-            <p>
-              Edit <code>src/App.jsx</code> and save to test HMR
-            </p>
-          </div>
-          <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-          </p>
-    </Grommet>
+       <Box flex direction='column' justifyContent='center' alignItems='center'>
+          <Card paddding='3rem' margin='3rem'>
+            <Heading> Simple Quiz App </Heading>
+            <Paragraph>
+              answer the 5 questions in multiple choice format and gain points!
+            </Paragraph>
+            <Button primary label='Start Quiz!' onClick={() => setStartQuiz(true)}/>
+          </Card>
+      </Box>
   )
 }
 
