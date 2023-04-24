@@ -20,7 +20,7 @@ const QuizItems = ({ question, correct_answer, incorrect_answers, handleNextQues
                 <h3>{category}</h3>
                 <h3>for {score} point(s)</h3>
             </div>
-            <h1 dangerouslySetInnerHTML={{__html: question}} style={{ lineHeight: '3rem', wordBreak: 'break-all' }}/>
+            <h1 dangerouslySetInnerHTML={{__html: question}} style={{ lineHeight: '3rem', wordBreak: 'break-word' }}/>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '3rem'}}>
                 {
                     options.map(answer => <Button key={answer} primary textAlign="center" width='300px' disabled={showNextQuestion} onClick={() => onClickAnswer(answer)} label={answer} />)
