@@ -33,7 +33,7 @@ function App() {
     if (isLoading) {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', height: '50vh', textAlign: 'center', margin: 'auto'}}>
-                <Spinner size='xlarge'/>
+                <Spinner size='large'/>
             </div>
         )
     }
